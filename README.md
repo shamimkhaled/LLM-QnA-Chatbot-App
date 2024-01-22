@@ -4,6 +4,7 @@
 ## Overview
 
 This Streamlit Q&A Chatbot is built using the Langchain library and OpenAI API. It allows users to input questions and receive responses from the OpenAI model.
+[Live Deployment Site](https://huggingface.co/spaces/iamkhaled94/QnA-Chatbot-LLM-App)
 
 ## Prerequisites
 
@@ -18,7 +19,7 @@ This Streamlit Q&A Chatbot is built using the Langchain library and OpenAI API. 
 1. Clone the repository:
 
 ```bash
-   git clone https://github.com/your_username/your_repository.git
+   git clone https://github.com/shamimkhaled/LLM-QnA-Chatbot-App.git
 ```
 2. Create and activate the virtual environment:
 ```bash
