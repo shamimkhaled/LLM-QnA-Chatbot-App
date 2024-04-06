@@ -1,70 +1,66 @@
 
-# Data Extraction with LLM | Documentation
-### Overview
-Data Extraction with LLM (Language Model) is a Streamlit application designed to extract data from URLs using Langchain library and the OpenAI API. It facilitates users to input a URL link and retrieve data in JSON format from the OpenAI model.
+# LLM Q&A Chatbot - Documentation
 
-### Live Deployment Site
-The live deployment of this application can be accessed here.
+## Overview
 
-### Prerequisites
-Before using the Data Extraction with LLM application, ensure that you have the following prerequisites installed:
+This Streamlit Q&A Chatbot is built using the Langchain library and OpenAI API. It allows users to input questions and receive responses from the OpenAI model.
+[Live Deployment Site](https://huggingface.co/spaces/iamkhaled94/QnA-Chatbot-LLM-App)
+
+## Prerequisites
+
 - Python 3.x
 - OpenAI API key
 - Streamlit
 - Langchain
-- Requests
-- BeautifulSoup
+- HuggingFace Hub
 
-### Setup
-To set up the application, follow these steps:
+## Setup
 
-- Clone the repository:
+1. Clone the repository:
+
 ```bash
-git clone https://github.com/shamimkhaled/llm-with-web-scraping.git
-
+   git clone https://github.com/shamimkhaled/LLM-QnA-Chatbot-App.git
 ```
-- Create and activate the virtual environment:
-
+2. Create and activate the virtual environment:
 ```bash
 python -m venv venv
-
 ```
-- Activate the virtual environment (In Windows):
-
+Activate the virtual environment (In Windows):
 ```bash
 .\venv\Scripts\activate
 ```
-- Install dependencies:
+3. Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
-- Create a .env file in the project root and add your OpenAI API key:
+4. Create a .env file in the project root and add your OpenAI API key:
 ```bash
 OPENAI_API_KEY=your_openai_api_key_here
 ```
-### Usage
-Once the setup is complete, follow these steps to use the application:
+## Usage
+#### Run the Streamlit app:
 
-Run the Streamlit app:
 ```bash
-streamlit run main.py
+streamlit run app.py
 ```
-- Enter your link in the provided input field.
-- Select the option to specify which information to extract.
-- Click the "Get Data" button to retrieve the extracted data in JSON format.
-### Example
-Here's an example usage scenario:
+- Enter your question in the provided input field.
 
-- User enters the URL of a news article.
-- User selects to extract the article text.
-- User clicks "Get Data" button.
-- Application fetches the article text from the URL using Langchain and OpenAI API.
-- Retrieved data is displayed in JSON format.
-By following these steps, users can easily extract relevant data from URLs using the Data Extraction with LLM application.
+- Click the "Ask the question" button to get the AI-generated response.
 
-## Troubleshooting
-- If you encounter any issues during setup or usage, please refer to the GitHub repository's issue tracker or documentation for assistance.
+## Code Structure
+- app.py: Main Streamlit application file.
+- langchain.llms.OpenAI: Langchain OpenAI wrapper for interaction with the OpenAI API.
+- get_openai_response(): Function to send a question to OpenAI and receive a response.
+- Streamlit components for UI: st.set_page_config(), st.header(), st.text_input(), st.button(), st.subheader(), and st.write().
+## Important Note
+- The OpenAI model text-davinci-003 has been deprecated. 
+- The code has been modified to use the gpt-3.5-turbo-instruct model. Ensure your OpenAI API key is valid and replace the model name if needed.
 
+For the latest updates and deprecations, refer to the OpenAI documentation.
+
+## Contributing
+Feel free to contribute to this project by submitting pull requests or reporting issues.
 ## Color Reference
 
 | Color             | Hex                                                                |
